@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<h1 align="center">Files</h1>
+<ul class="list-group list-group-flush" id="files">
+    {% for filecontents in user.files %}
+    <li class="list-group-item">
+        {{ filecontents.name }}
+    </li>
+    {% endfor %}
+</ul>
+
+{% endblock %}
