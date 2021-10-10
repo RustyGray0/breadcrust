@@ -1,8 +1,9 @@
-from flask import Blueprint, render_template, request, redirect, flash
+from flask import Blueprint, render_template, request, redirect, flash, send_file
 from flask.helpers import url_for
 from flask_login import login_required, current_user
 from .models import FileContents
 from . import db
+from io import BytesIO
 
 views = Blueprint('views', __name__)
 
